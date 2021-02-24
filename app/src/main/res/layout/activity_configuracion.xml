@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Configuracion">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Valor máximo de A:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/b_config_menos_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="DisminuirNumero"
+        android:text="&lt;"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_config_a"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tv_config_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/b_config_menos_a"
+        app:layout_constraintEnd_toStartOf="@+id/b_config_mas_a"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_config_menos_a"
+        app:layout_constraintTop_toTopOf="@+id/b_config_menos_a" />
+
+    <Button
+        android:id="@+id/b_config_mas_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="AumentarNumero"
+        android:text="&gt;"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_config_a"
+        app:layout_constraintTop_toTopOf="@+id/b_config_menos_a" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Valor mínimo de B:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_config_menos_a" />
+
+    <Button
+        android:id="@+id/b_config_menos_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="DisminuirNumero"
+        android:text="&lt;"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_config_b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/tv_config_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/b_config_menos_b"
+        app:layout_constraintEnd_toStartOf="@+id/b_config_mas_b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/b_config_menos_b"
+        app:layout_constraintTop_toTopOf="@+id/b_config_menos_b" />
+
+    <Button
+        android:id="@+id/b_config_mas_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="AumentarNumero"
+        android:text="&gt;"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/b_config_menos_b"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_config_b"
+        app:layout_constraintTop_toTopOf="@+id/b_config_menos_b" />
+
+    <Switch
+        android:id="@+id/sw_config_cuenta_atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:onClick="cuentaAtras"
+        android:text="Cuenta Atrás"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_config_menos_b" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_config"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sw_config_cuenta_atras">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ti_config_cuenta_atras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Duración de la cuenta atrás"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Operaciones:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_config" />
+
+    <CheckBox
+        android:id="@+id/cb_config_suma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="+"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/cb_config_resta"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <CheckBox
+        android:id="@+id/cb_config_resta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_config_suma"
+        app:layout_constraintEnd_toStartOf="@+id/cb_config_mult"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_config_suma"
+        app:layout_constraintTop_toTopOf="@+id/cb_config_suma" />
+
+    <CheckBox
+        android:id="@+id/cb_config_mult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cb_config_resta"
+        app:layout_constraintTop_toTopOf="@+id/cb_config_suma" />
+
+    <Button
+        android:id="@+id/b_config_guardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="guardar"
+        android:text="guardar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spi_confi" />
+
+    <TextView
+        android:id="@+id/tv_tiempo_config"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Tipo de Animación:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cb_config_suma" />
+
+    <Spinner
+        android:id="@+id/spi_confi"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tiempo_config" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
